@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="~/css/styleParking.css" asp-append-version="true" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <body>
+       <img src ="~/images/logo4.jpg" alt="Logo" width="300" height="200"/>
+       <h1>Dobrodošli na Parking @ViewData["BrojParkinga"]</h1>
+       <div class="section1">
+       <a asp-action="Uvid" asp-controller="Home" class="btn btn-primary">Uvid u broj slobodnih mjesta</a>
+       <a asp-action="" asp-controller="Parking" class="btn btn-primary">Zatraži račun</a>
+       </div >
+       <div class="section2">
+       <a asp-action="Zauzmi" asp-controller="Parking" class="btn btn-primary">Zauzmi parking mjesto</a>
+       <a asp-action="" asp-controller="Parking" class="btn btn-primary">Napusti parking</a>
+       </div>
+
+       <div >
+           <h3 class="section3">Cijena parkinga: [Cijena]</h3>
+           <h3>Vrijeme provedeno na parkingu: []</h3>
+       </div>
+   </body>
+   </html>

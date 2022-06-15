@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="~/css/styleVlasnik.css" asp-append-version="true" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <body>
+       <img src ="~/images/logo4.jpg" alt="Logo" width="300" height="200"/>
+       <h1>Dobrodošao Vlasnik</h1>
+       <h2>Da li želite</h2>
+       <div class="section1">
+       <a asp-action="OtvoriParking" asp-controller="Vlasnik" class="btn btn-primary dugme">Otvoriti novi parking</a>
+       <a asp-action="" asp-controller="Home" class="btn btn-primary dugme">Obrisati parking</a>
+       <a asp-action="" asp-controller="Home" class="btn btn-primary dugme">Promijeniti cijenu</a>
+       </div >
+       
+
+      
+   </body>
+   </html>

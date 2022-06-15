@@ -1,0 +1,287 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script type="text/javascript">
+    
+    
+showSlides(1);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script type='text/javascript'
+src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async
+defer></script>
+
+<script type='text/javascript'>
+ function GetMap()
+ {
+ var map = new Microsoft.Maps.Map('#myMap', {
+ credentials: 'AuJQuTnjmpO_USzyAjZhAa9awqvPr64fN19SVPMusOxM1vRm3zKWbeeSdCMafAfb',
+ center: new Microsoft.Maps.Location(43.8563, 18.4131),
+ mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+ zoom: 10
+
+ });
+ infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+ visible: false
+ });
+ infobox.setMap(map);
+ var lok1 = new Microsoft.Maps.Location(43.8548, 18.4140);
+ var p1 = new Microsoft.Maps.Pushpin(lok1);
+ p1.metadata = {
+ title: 'Parking 1',
+ description: 'Skenderija, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p1, 'click', pushpinClicked);
+ map.entities.push(p1);
+
+ var lok2 = new Microsoft.Maps.Location(43.5116, 18.2254);
+ var p2 = new Microsoft.Maps.Pushpin(lok2);
+ p2.metadata = {
+ title: 'Parking 2',
+ description: 'Dolac Malta, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p2, 'click', pushpinClicked);
+ map.entities.push(p2);
+
+ var lok3 = new Microsoft.Maps.Location(43.8621, 18.3856);
+ var p3 = new Microsoft.Maps.Pushpin(lok3);
+ p3.metadata = {
+ title: 'Parking 3',
+ description: 'Pofalići, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p3, 'click', pushpinClicked);
+ map.entities.push(p3);
+
+ var lok4 = new Microsoft.Maps.Location(43.5135, 18.2155);
+ var p4 = new Microsoft.Maps.Pushpin(lok4);
+ p4.metadata = {
+ title: 'Parking 4',
+ description: 'Buća Potok, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p4, 'click', pushpinClicked);
+ map.entities.push(p4);
+
+ var lok5 = new Microsoft.Maps.Location(43.8775, 18.3144);
+ var p5 = new Microsoft.Maps.Pushpin(lok5);
+ p5.metadata = {
+ title: 'Parking 5',
+ description: 'Rajlovac, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p5, 'click', pushpinClicked);
+ map.entities.push(p5);
+
+
+ var lok6 = new Microsoft.Maps.Location(43.9116, 18.2254);
+ var p6 = new Microsoft.Maps.Pushpin(lok6);
+ p6.metadata = {
+ title: 'Parking 6',
+ description: 'Jezero, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p6, 'click', pushpinClicked);
+ map.entities.push(p6);
+
+
+ var lok7 = new Microsoft.Maps.Location(43.8314, 18.3002);
+ var p7 = new Microsoft.Maps.Pushpin(lok7);
+ p7.metadata = {
+ title: 'Parking 7',
+ description: 'Ilidža, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p7, 'click', pushpinClicked);
+ map.entities.push(p7);
+
+
+ var lok8 = new Microsoft.Maps.Location(43.8660, 18.4223);
+ var p8 = new Microsoft.Maps.Pushpin(lok8);
+ p8.metadata = {
+ title: 'Parking 8',
+ description: 'Bjelave, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p8, 'click', pushpinClicked);
+ map.entities.push(p8);
+
+
+ var lok9 = new Microsoft.Maps.Location(43.8436, 18.3484);
+ var p9 = new Microsoft.Maps.Pushpin(lok9);
+ p9.metadata = {
+ title: 'Parking 9',
+ description: 'Nedžarići, Cijena: 2 KM/h'
+ };
+ Microsoft.Maps.Events.addHandler(p9, 'click', pushpinClicked);
+ map.entities.push(p9);
+
+ 
+ 
+ function pushpinClicked(e) {
+ if (e.target.metadata) {
+ infobox.setOptions({
+ location: e.target.getLocation(),
+ title: e.target.metadata.title,
+ description: e.target.metadata.description,
+ visible: true
+ });
+ }
+ }
+ }
+</script>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="~/css/styleKorisnik.css" asp-append-version="true" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body onload = "currentSlide(1)">
+       <!-- Slideshow container -->
+       <h1>Dobrodošao VIP Korisnik!</h1>
+       <h2>Dostupni parkinzi: </h2>
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <div class="row">
+       <div class="card">
+  <img src="~/images/parking.jpg" alt = "Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 1</b></h4>
+    <p>Sarajevo, Skenderija</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=1 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+<div class="card">
+  <img src="~/images/parking.jpg" alt="Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 2</b></h4>
+    <p>Sarajevo, Dolac Malta</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=2 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+<div class="card">
+  <img src="~/images/parking.jpg" alt="Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 3</b></h4>
+    <p>Sarajevo, Pofalići</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=3 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+       </div>
+    
+  </div>
+
+  <div class="mySlides fade">
+    
+   <div class="row">
+       <div class="card">
+  <img src="~/images/parking.jpg" alt = "Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 4</b></h4>
+    <p>Sarajevo, Buća Potok</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=4 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+<div class="card">
+  <img src="~/images/parking.jpg" alt="Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 5</b></h4>
+    <p>Sarajevo, Rajlovac</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=5 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+<div class="card">
+  <img src="~/images/parking.jpg" alt="Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 6</b></h4>
+    <p>Sarajevo, Jezero</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=6 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+       
+       </div>
+   
+  </div>
+
+  <div class="mySlides fade">
+    
+     <div class="row">
+       <div class="card">
+  <img src="~/images/parking.jpg" alt = "Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 7</b></h4>
+    <p>Sarajevo, Ilidža</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=7 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+<div class="card">
+  <img src="~/images/parking.jpg" alt="Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 8</b></h4>
+    <p>Sarajevo, Bjelave</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=8 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+<div class="card">
+  <img src="~/images/parking.jpg" alt="Avatar" style="width:20%">
+  <div class="container">
+    <h4><b>Parking 9</b></h4>
+    <p>Sarajevo, Nedžarići</p>
+    <a asp-action="VIP" asp-controller="Parking" asp-route-n=9 class="btn btn-primary">Posjeti</a>
+  </div>
+</div>
+      
+       </div>
+    
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<div style="margin-top: 2%; margin-bottom: 2% ">
+        <div id="myMap"
+             style="position:relative;width:100%;height:400px;"></div>
+    </div>
+       
+   </body>
+</html>
+

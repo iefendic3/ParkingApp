@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="~/css/styleRegister.css" asp-append-version="true" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body class="bodyRegister">
+  <div class="container">
+      <p class="logo"><img src="/images/logo4.jpg" height="200" width="300" border="0" /></p>
+    <div class="title">Otvaranje parkinga</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Naziv parkinga: </span>
+            <input type="text" placeholder="Unesite naziv parkinga" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Lokacija: </span>
+            <input type="text" placeholder="Unesite lokaciju parkinga" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Cijena:</span>
+            <input type="text" placeholder="Unesite cijenu (može se mijenjati kasnije)" required>
+          </div>
+          <hr />
+          <div class="input-box">
+            <span class="details">Ime i prezime radnika na parkingu:</span>
+            <input type="text" placeholder="Unesite ime i prezime" >
+          </div>
+          <div class="input-box">
+            <span class="details">Ime i prezime radnika na sistemu:</span>
+            <input type="text" placeholder="Unesite ime i prezime" >
+          </div>
+        </div>
+        
+      
+        <div class="button">
+          <input type="submit" value="Otvori parking">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
