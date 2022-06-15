@@ -1,0 +1,78 @@
+﻿.bodyRegister {
+    background-color: #262a2b;
+    
+}
+.input-box{
+    width: 370px;
+    display:flex;
+    align-content: space-between;
+    flex-direction: column;
+}
+h1, h2, h3{
+    color:white;
+}
+
+.form-label{
+    color: black;
+}
+
+.row{
+    width: 1000px;
+}
+.uloga-details{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+.title{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: -20px;
+    color: white;
+}
+.logo{
+    margin-left: 35px;
+}
+label{
+    color: white;
+}
+.details{
+    font-weight: bold;
+    color:white;
+    margin-right: 30px;
+}
+
+
+form .button {
+    height: 45px;
+    margin: 35px 0
+}
+
+    form .button input {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #aa6c39, #FFD700);
+    }
+
+        form .button input:hover {
+            /* transform: scale(0.99); */
+            background: linear-gradient(-135deg, #aa6c39, #FFD700);
+        }
+
+footer{
+    color:white;
+}
